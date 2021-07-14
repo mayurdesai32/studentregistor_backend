@@ -34,7 +34,11 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please enter valid class'],
   },
-  society: { type: String },
+  societies: {
+    type: String,
+    enum: ['theatre', 'art', 'none'],
+    default: 'none',
+  },
 
   // year: {
   //   type: Date,
